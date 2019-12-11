@@ -1,0 +1,7 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Boxydev_Slider::head" title="Boxydev" module="Boxydev_Slider" sortOrder="30" resource="Boxydev_Slider::head" />
+        <add id="Boxydev_Slider::slide" title="Slides" module="Boxydev_Slider" sortOrder="10" parent="Boxydev_Slider::head" action="boxydev/slide" resource="Boxydev_Slider::slide" />
+    </menu>
+</config>

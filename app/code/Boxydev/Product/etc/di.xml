@@ -1,0 +1,12 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\Quote">
+        <plugin name="CartPlugin" type="Boxydev\Product\Plugin\CartPlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="ProductPlugin" type="Boxydev\Product\Plugin\ProductPlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Customer\Model\Authentication">
+        <plugin name="AuthenticationPlugin" type="Boxydev\Product\Plugin\AuthenticationPlugin" sortOrder="1" />
+    </type>
+</config>

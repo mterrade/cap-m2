@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Boxydev_Contact::contact" title="Contacts" module="Boxydev_Contact" sortOrder="20" parent="Boxydev_Slider::head" action="boxydev/contact" resource="Boxydev_Contact::contact" />
+    </menu>
+</config>

@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Boxydev_Slider::head">
+                    <resource id="Boxydev_Contact::contact" title="Contact" sortOrder="10">
+                        <resource id="Boxydev_Contact::contact_save" title="Save Contact" sortOrder="10" />
+                        <resource id="Boxydev_Contact::contact_delete" title="Delete Contact" sortOrder="20" />
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

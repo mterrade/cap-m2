@@ -1,0 +1,21 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="boxydev_contact" resource="default" engine="innodb">
+        <column xsi:type="int" name="id" padding="11" unsigned="false" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name"/>
+        <column xsi:type="varchar" name="firstname" nullable="false" length="255" comment="Firstname"/>
+        <column xsi:type="date" name="birthdate" nullable="false" comment="Birthdate"/>
+        <column xsi:type="varchar" name="civility" nullable="false" length="255" comment="Civility"/>
+        <column xsi:type="text" name="biography" nullable="true" comment="Biography"/>
+        <column xsi:type="varchar" name="avatar" nullable="false" length="255" comment="Avatar"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+
+        <index referenceId="BOXYDEV_CONTACT_NAME_FIRSTNAME" indexType="fulltext">
+            <column name="name"/>
+            <column name="firstname"/>
+        </index>
+    </table>
+</schema>

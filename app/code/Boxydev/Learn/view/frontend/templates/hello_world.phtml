@@ -1,0 +1,10 @@
+<?php
+    // Instance du block Boxydev\Learn\Block\Hello
+    // dump($block);
+    /** @var Boxydev\Learn\ViewModel\Hello $viewModel */
+    $viewModel = $block->getViewModel(); // ->getData('view_model')
+?>
+
+<h1><?= $viewModel->say(); ?></h1>
+<p>Client: <?= $viewModel->getCustomer()->getEmail(); ?></p>
+<p>Requête: <?php dump($viewModel->getRequest()->getParams()); ?></p>

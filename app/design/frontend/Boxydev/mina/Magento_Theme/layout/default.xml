@@ -1,0 +1,43 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.jpg</argument>
+                <argument name="logo_img_width" xsi:type="number">80</argument>
+                <argument name="logo_img_height" xsi:type="number">80</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="header" remove="true" />
+        <!-- <referenceBlock name="header">
+            <arguments>
+                <argument name="show_part" xsi:type="string">behavior2</argument>
+            </arguments>
+        </referenceBlock> -->
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="google-link" before="contact-us-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Mon lien</argument>
+                    <argument name="path" xsi:type="string">https://google.fr</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="target" xsi:type="string">_blank</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block name="toto"
+                class="Magento\Framework\View\Element\Text">
+                <action method="setText">
+                    <argument name="text" xsi:type="string">
+                        <![CDATA[
+                            <h1>Hello mon bloc de texte</h1>
+                        ]]>
+                    </argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
