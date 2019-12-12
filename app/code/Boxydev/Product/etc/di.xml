@@ -12,4 +12,6 @@
     <preference for="Magento\Catalog\Model\Product" type="Boxydev\Product\Model\Product" />
     <preference for="Magento\Catalog\Block\Product\View" type="Boxydev\Product\Block\Product\View" />
     <preference for="Magento\Checkout\Controller\Cart\Index" type="Boxydev\Product\Controller\Cart\Index" />
+    <preference for="Magento\Catalog\Pricing\Render\FinalPriceBox" type="Boxydev\Product\Pricing\Render\FinalPriceBox" />
+    <preference for="Magento\ConfigurableProduct\Pricing\Render\FinalPriceBox" type="Boxydev\Product\Pricing\Render\FinalPriceBox" />
 </config>
