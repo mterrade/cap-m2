@@ -1,0 +1,26 @@
+<div class="control" data-bind="css: {'_with-tooltip': true}">
+    <input class="input-text" type="text" data-bind="
+        value: value,
+        valueUpdate: 'keyup',
+        hasFocus: focused,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': getDescriptionId(),
+            'aria-required': required,
+            'aria-invalid': error() ? true : 'false',
+            id: uid,
+            disabled: disabled
+        }" />
+
+    <div class="field-tooltip toggle">
+        <span class="field-tooltip-action action-help"
+              tabindex="0"
+              data-toggle="dropdown"
+              data-bind="mageInit: {'dropdown':{'activeClass': '_active'}}"></span>
+
+        <div class="field-tooltip-content"
+             data-target="dropdown" translate="'Choisir la ville'">
+        </div>
+    </div>
+</div>

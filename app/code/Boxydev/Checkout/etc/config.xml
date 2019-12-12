@@ -1,0 +1,17 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <boxydevshipping>
+                <active>1</active>
+                <title>Boxydev Shipping</title>
+                <name>Boxydev Shipping 1</name>
+                <model>Boxydev\Checkout\Model\Carrier\BoxydevShipping</model>
+                <shipping_cost>10</shipping_cost>
+                <sallowspecific>0</sallowspecific>
+                <sort_order>15</sort_order>
+                <debug>1</debug>
+            </boxydevshipping>
+        </carriers>
+    </default>
+</config>
