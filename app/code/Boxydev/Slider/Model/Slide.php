@@ -11,13 +11,44 @@
 
 namespace Boxydev\Slider\Model;
 
+use Boxydev\Slider\Api\Data\SlideInterface;
 use Magento\Framework\Model\AbstractModel;
 use Boxydev\Slider\Model\ResourceModel\Slide as SlideResource;
 
-class Slide extends AbstractModel
+class Slide extends AbstractModel implements SlideInterface
 {
     protected function _construct()
     {
         $this->_init(SlideResource::class);
+    }
+
+    public function getId()
+    {
+        return $this->_getData('id');
+    }
+
+    public function setId($id)
+    {
+        $this->setData('id', $id);
+    }
+
+    public function getName()
+    {
+        return $this->_getData('name');
+    }
+
+    public function setName($name)
+    {
+        $this->setData('name', $name);
+    }
+
+    public function getImage()
+    {
+        return $this->_getData('image');
+    }
+
+    public function setImage($image)
+    {
+        return $this->setData('image', $image);
     }
 }

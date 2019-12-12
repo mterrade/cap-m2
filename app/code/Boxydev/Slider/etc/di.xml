@@ -62,4 +62,8 @@
             <argument name="imageUploader" xsi:type="object">Boxydev\Slider\SlideImageUpload</argument>
         </arguments>
     </type>
+
+    <preference for="Boxydev\Slider\Api\SlideRepositoryInterface" type="Boxydev\Slider\Model\SlideRepository" />
+    <preference for="Boxydev\Slider\Api\Data\SlideInterface" type="Boxydev\Slider\Model\Slide" />
+    <preference for="Boxydev\Slider\Api\Data\SlideSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
 </config>

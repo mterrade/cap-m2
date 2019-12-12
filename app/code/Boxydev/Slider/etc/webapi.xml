@@ -1,0 +1,32 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/boxydev_slide/:id">
+        <service class="Boxydev\Slider\Api\SlideRepositoryInterface" method="getById" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route method="GET" url="/V1/boxydev_slide">
+        <service class="Boxydev\Slider\Api\SlideRepositoryInterface" method="getList" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route method="POST" url="/V1/boxydev_slide">
+        <service class="Boxydev\Slider\Api\SlideRepositoryInterface" method="save" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route method="PUT" url="/V1/boxydev_slide">
+        <service class="Boxydev\Slider\Api\SlideRepositoryInterface" method="save" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route method="DELETE" url="/V1/boxydev_slide">
+        <service class="Boxydev\Slider\Api\SlideRepositoryInterface" method="delete" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>
