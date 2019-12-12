@@ -1,0 +1,32 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <!-- La nouvelle étape à ajouter -->
+                                        <item name="cross-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">Boxydev_Checkout/js/view/cross-step-view</item>
+                                            <!-- Priorité de l'étape -->
+                                            <!-- Moins de 1 : Avant l'étape de livraison -->
+                                            <!-- Entre 1 et 2 : Entre la livraison et le paiement -->
+                                            <!-- Plus que 2 : Après l'étape de paiement -->
+                                            <item name="sortOrder" xsi:type="string">0</item>
+                                            <item name="children" xsi:type="array">
+                                                <!-- Si on a besoin de déclarer d'autres composants -->
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

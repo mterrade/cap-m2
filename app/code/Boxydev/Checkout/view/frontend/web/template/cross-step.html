@@ -1,0 +1,24 @@
+<!-- L'id doit correspondre à ce qu'on a défini dans le js -->
+<li id="cross-step" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Cross step'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+
+        <div class="cross-products">
+            <!-- ko foreach: getCrossProducts() -->
+            <div data-bind="template: 'Boxydev_Checkout/cross-product'"></div>
+            <!-- /ko -->
+        </div>
+
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button data-role="opc-continue" type="submit" class="button action continue primary">
+                        <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>
