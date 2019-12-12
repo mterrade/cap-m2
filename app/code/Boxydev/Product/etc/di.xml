@@ -9,4 +9,7 @@
     <type name="Magento\Customer\Model\Authentication">
         <plugin name="AuthenticationPlugin" type="Boxydev\Product\Plugin\AuthenticationPlugin" sortOrder="1" />
     </type>
+    <preference for="Magento\Catalog\Model\Product" type="Boxydev\Product\Model\Product" />
+    <preference for="Magento\Catalog\Block\Product\View" type="Boxydev\Product\Block\Product\View" />
+    <preference for="Magento\Checkout\Controller\Cart\Index" type="Boxydev\Product\Controller\Cart\Index" />
 </config>
