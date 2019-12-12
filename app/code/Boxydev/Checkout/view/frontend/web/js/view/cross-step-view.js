@@ -4,8 +4,9 @@ define([
     'underscore',
     'Magento_Checkout/js/model/step-navigator',
     'jquery',
-    'mage/storage'
-], function (ko, Component, _, stepNavigator, $, storage) {
+    'mage/storage',
+    'Magento_Checkout/js/action/get-totals'
+], function (ko, Component, _, stepNavigator, $, storage, getTotals) {
     'use strict';
 
     return Component.extend({
@@ -56,6 +57,8 @@ define([
             if (data.length > 0) {
                 storage.post('boxydev/checkout/crossproducts', JSON.stringify(data)).done(function (response) {
                     console.log(response);
+                    getTotals([]);
+                    stepNavigator.next();
                 });
             } else {
                 stepNavigator.next();
