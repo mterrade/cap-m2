@@ -5,13 +5,13 @@
          class="step-content"
          data-role="content">
 
-        <div class="cross-products">
-            <!-- ko foreach: getCrossProducts() -->
-            <div data-bind="template: 'Boxydev_Checkout/cross-product'"></div>
-            <!-- /ko -->
-        </div>
-
         <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div class="cross-products">
+                <!-- ko foreach: getCrossProducts() -->
+                <div data-bind="template: 'Boxydev_Checkout/cross-product'"></div>
+                <!-- /ko -->
+            </div>
+
             <div class="actions-toolbar">
                 <div class="primary">
                     <button data-role="opc-continue" type="submit" class="button action continue primary">

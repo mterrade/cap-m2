@@ -2,8 +2,10 @@ define([
     'ko',
     'uiComponent',
     'underscore',
-    'Magento_Checkout/js/model/step-navigator'
-], function (ko, Component, _, stepNavigator) {
+    'Magento_Checkout/js/model/step-navigator',
+    'jquery',
+    'mage/storage'
+], function (ko, Component, _, stepNavigator, $, storage) {
     'use strict';
 
     return Component.extend({
@@ -48,8 +50,16 @@ define([
         /**
          * Pour se rendre à l'étape suivante
          */
-        navigateToNextStep () {
-            stepNavigator.next();
+        navigateToNextStep: function (form) {
+            var data = $(form).serializeArray();
+
+            if (data.length > 0) {
+                storage.post('boxydev/checkout/crossproducts', JSON.stringify(data)).done(function (response) {
+                    console.log(response);
+                });
+            } else {
+                stepNavigator.next();
+            }
         },
 
         /**
