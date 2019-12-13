@@ -11,7 +11,15 @@
 
 namespace Boxydev\CustomerJob\Model\Attribute\Source;
 
-class Job
-{
+use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
+class Job extends AbstractSource
+{
+    public function getAllOptions()
+    {
+        return [
+            ['label' => 'Développeur', 'value' => 'Développeur'],
+            ['label' => 'Développeur web', 'value' => 'Développeur web']
+        ];
+    }
 }
