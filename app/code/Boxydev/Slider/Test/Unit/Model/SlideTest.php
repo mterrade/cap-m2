@@ -15,6 +15,7 @@ use Boxydev\Slider\Api\Data\SlideInterface;
 use Boxydev\Slider\Model\Slide;
 use Magento\Framework\Model\AbstractModel;
 use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
+use Magento\Framework\UrlInterface;
 use Magento\Store\Api\Data\StoreInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use PHPUnit\Framework\TestCase;
@@ -31,7 +32,11 @@ class SlideTest extends TestCase
         $storeMock = $this->getMockBuilder(StoreInterface::class)
             ->setMethods(['getBaseUrl'])
             ->getMockForAbstractClass();
-        $storeMock->method('getBaseUrl')->willReturn('http://localhost/media/');
+        $storeMock
+            ->expects($this->once())
+            ->method('getBaseUrl')
+            ->with(UrlInterface::URL_TYPE_MEDIA)
+            ->willReturn('http://localhost/media/');
 
         $storeManagerMock = $this->createMock(StoreManagerInterface::class);
         $storeManagerMock->method('getStore')->willReturn($storeMock);

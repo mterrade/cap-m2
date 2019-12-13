@@ -1,0 +1,11 @@
+<?php
+/** @var \Boxydev\Slider\Model\Slide[] $slides */
+$slides = $this->getSlides();
+?>
+
+<div>
+    <?php foreach ($slides as $slide) : ?>
+        <h2><?= $slide->getName(); ?></h2>
+        <img src="<?= $slide->getImageUrl(); ?>" alt="">
+    <?php endforeach; ?>
+</div>
