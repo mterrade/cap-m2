@@ -239,6 +239,7 @@ return [
         'Amazon_Payment' => 1,
         'Boxydev_Checkout' => 1,
         'Boxydev_Slider' => 1,
+        'Boxydev_CustomerJob' => 1,
         'Boxydev_Learn' => 1,
         'Boxydev_Product' => 1,
         'Boxydev_Contact' => 1,

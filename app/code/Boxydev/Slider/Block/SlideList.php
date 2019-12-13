@@ -59,10 +59,10 @@ class SlideList extends Template
 
     public function getSlides()
     {
-        $collection = $this->collection
+        $this->collection
             ->setPageSize($this->scopeConfig->getValue('slides/slides/number'))
             ->setCurPage(1);
 
-        return $collection;
+        return $this->collection;
     }
 }

@@ -1,0 +1,7 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="form.additional.info">
+            <block class="Boxydev\CustomerJob\Block\CustomerJob" name="customer_job" before="amazon.pay.password.reset" template="Boxydev_CustomerJob::job.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
