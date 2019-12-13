@@ -8,6 +8,16 @@
                    data-validate="{required:true}"
                    aria-required="true"> -->
 
+            <?php
+                /** @var \Boxydev\CustomerJob\Block\CustomerJob $block */
+                $collection = $block->getCustomerCollection()
+                    ->addAttributeToSelect('job');
+                dump($collection->getItems());
+
+                $repository = $block->getCustomerListByRepository();
+                dump($repository->getItems());
+            ?>
+
             <select name="job" id="job">
                 <?php foreach ($this->getJobs() as $job) { ?>
                     <option
