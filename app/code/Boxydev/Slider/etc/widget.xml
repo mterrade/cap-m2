@@ -1,0 +1,12 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Boxydev\Slider\Block\SlideWidget" id="boxydev_slide_widget">
+        <label>Boxydev Slides</label>
+        <description>Slides</description>
+        <parameters>
+            <parameter name="slides" sort_order="10" visible="true" xsi:type="text">
+                <label>Slides number</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
